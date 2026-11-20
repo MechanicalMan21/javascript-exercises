@@ -5,12 +5,12 @@ const leapYears = function(year) {
     const ZERO = 0;
     let result = false;
 
-    if (year/DIVISIBLE_BY_FOUR === ZERO) {
-        if(year/DIVISIBLE_BY_HUNDRED !== ZERO) {
+    if (year%DIVISIBLE_BY_FOUR === ZERO) {
+        if(year%DIVISIBLE_BY_HUNDRED !== ZERO) {
             return true;
         }
-        if(year/DIVISIBLE_BY_HUNDRED === ZERO) {
-            if (year/DIVISIBLE_BY_4HUNDRED === ZERO) {
+        if(year%DIVISIBLE_BY_HUNDRED === ZERO) {
+            if (year%DIVISIBLE_BY_4HUNDRED === ZERO) {
                 return true;
             }
         }        
